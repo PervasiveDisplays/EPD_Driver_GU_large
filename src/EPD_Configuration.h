@@ -112,11 +112,11 @@ const pins_t boardLaunchPad_EXT3 =
     .panelDC = 12, ///< EXT3 pin 4 Orange
     .panelReset = 13, ///< EXT3 pin 5 Yellow
     .panelCS = 19,
-	.panelCSS = NOT_CONNECTED,
+	.panelCSS = 39,
     .panelON_EXT2 = NOT_CONNECTED,
     .panelSPI43_EXT2 = NOT_CONNECTED,
-    .flashCS = NOT_CONNECTED,
-    .flashCSS = NOT_CONNECTED
+    .flashCS = 18,
+    .flashCSS = 38
 };
 
 ///
@@ -128,11 +128,11 @@ const pins_t boardLaunchPad_EXT2 =
     .panelDC = 9, ///< EXT3 pin 4 Orange
     .panelReset = 10, ///< EXT3 pin 5 Yellow
     .panelCS = 19,
-	.panelCSS = NOT_CONNECTED,
+	.panelCSS = 39,
     .panelON_EXT2 = 11,
     .panelSPI43_EXT2 = 17,
-    .flashCS = NOT_CONNECTED,
-    .flashCSS = NOT_CONNECTED
+    .flashCS = 18,
+    .flashCSS = 38
 };
 
 ///
@@ -144,11 +144,11 @@ const pins_t boardRaspberryPiPico_RP2040_EXT3 =
     .panelDC = 12, ///< EXT3 pin 4 Orange -> GP12
     .panelReset = 11, ///< EXT3 pin 5 Yellow -> GP11
     .panelCS = 17,
-	.panelCSS = NOT_CONNECTED,
+	.panelCSS = 14,
     .panelON_EXT2 = NOT_CONNECTED,
     .panelSPI43_EXT2 = NOT_CONNECTED,
-    .flashCS = NOT_CONNECTED,
-    .flashCSS = NOT_CONNECTED
+    .flashCS = 10,
+    .flashCSS = 15
 };
 
 ///
@@ -160,11 +160,11 @@ const pins_t boardRaspberryPiPico_RP2040_EXT2 =
     .panelDC = 12, ///< EXT3 pin 4 Orange -> GP12
     .panelReset = 11, ///< EXT3 pin 5 Yellow -> GP11
     .panelCS = 17,
-	.panelCSS = NOT_CONNECTED,
+	.panelCSS = 14,
     .panelON_EXT2 = 8,
     .panelSPI43_EXT2 = 7,
-    .flashCS = NOT_CONNECTED,
-    .flashCSS = NOT_CONNECTED
+    .flashCS = 10,
+    .flashCSS = 15
 };
 
 ///
@@ -176,11 +176,11 @@ const pins_t boardArduinoM0Pro_EXT3 =
     .panelDC = 5, ///< EXT3 pin 4 Orange
     .panelReset = 6, ///< EXT3 pin 5 Yellow
     .panelCS = 8,
-	.panelCSS = NOT_CONNECTED,
+	.panelCSS = 9,
     .panelON_EXT2 = NOT_CONNECTED,
     .panelSPI43_EXT2 = NOT_CONNECTED,
-    .flashCS = NOT_CONNECTED,
-    .flashCSS = NOT_CONNECTED
+    .flashCS = 7,
+    .flashCSS = 10
 };
 
 ///
@@ -192,11 +192,11 @@ const pins_t boardArduinoM0Pro_EXT2 =
     .panelDC = 5, ///< EXT3 pin 4 Orange
     .panelReset = 6, ///< EXT3 pin 5 Yellow
     .panelCS = 8,
-	.panelCSS = NOT_CONNECTED,
+	.panelCSS = 9,
     .panelON_EXT2 = 11,
     .panelSPI43_EXT2 = 9,
-    .flashCS = NOT_CONNECTED,
-    .flashCSS = NOT_CONNECTED
+    .flashCS = 7,
+    .flashCSS = 10
 };
 
 ///
