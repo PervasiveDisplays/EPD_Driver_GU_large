@@ -247,26 +247,20 @@ void EPD_Driver::globalUpdate(const uint8_t * data1m, const uint8_t * data2m, co
 //			- pointer to data char array
 //			- length/size of data
 void EPD_Driver::_sendIndexData( uint8_t index, const uint8_t *data, uint32_t len )
-{
-	uint32_t tempp = 500;
-		
+{		
 	digitalWrite( spi_basic.panelDC, LOW );      //DC Low
 	digitalWrite( spi_basic.panelCS, LOW );      //CS Low
 	digitalWrite( spi_basic.panelCSS, LOW );      //CS Low
-	delayMicroseconds(tempp);
 	SPI.transfer(index);
-	delayMicroseconds(tempp);
 	digitalWrite( spi_basic.panelCS, HIGH );     //CS High
 	digitalWrite( spi_basic.panelCSS, HIGH );     //CS High
 	digitalWrite( spi_basic.panelDC, HIGH );     //DC High
 	digitalWrite( spi_basic.panelCS, LOW );      //CS Low
 	digitalWrite( spi_basic.panelCSS, LOW );      //CS Low
-	delayMicroseconds(tempp);
 	for ( uint32_t i = 0; i < len; i++ )
 	{
 		SPI.transfer(data[ i ]);
 	}
-	delayMicroseconds(tempp);
 	digitalWrite( spi_basic.panelCS, HIGH );     //CS High
 	digitalWrite( spi_basic.panelCSS, HIGH );     //CS High
 }
@@ -402,15 +396,11 @@ void EPD_Driver::_sendIndexDataM( uint8_t index, const uint8_t *data, uint32_t l
   digitalWrite( spi_basic.panelCSS, HIGH );     //CSS slave High
   digitalWrite( spi_basic.panelDC, LOW );      //DC Low
   digitalWrite( spi_basic.panelCS, LOW );      //CS Low
-  delayMicroseconds(500);
   SPI.transfer( index );
-  delayMicroseconds(500);
   digitalWrite( spi_basic.panelCS, HIGH );     //CS High
   digitalWrite( spi_basic.panelDC, HIGH );     //DC High
   digitalWrite( spi_basic.panelCS, LOW );      //CS Low
-  delayMicroseconds(500);
   for ( int i = 0; i < len; i++ ) SPI.transfer( data[ i ] );
-  delayMicroseconds(500);
   digitalWrite( spi_basic.panelCS, HIGH );     //CS High
 }
 
@@ -419,14 +409,10 @@ void EPD_Driver::_sendIndexDataS( uint8_t index, const uint8_t *data, uint32_t l
   digitalWrite( spi_basic.panelCS, HIGH );     //CS Master High
   digitalWrite( spi_basic.panelDC, LOW );      //DC Low
   digitalWrite( spi_basic.panelCSS, LOW );      //CS slave Low
-    delayMicroseconds(500);
   SPI.transfer( index );
-    delayMicroseconds(500);
   digitalWrite( spi_basic.panelCSS, HIGH );     //CS slave High
   digitalWrite( spi_basic.panelDC, HIGH );     //DC High
   digitalWrite( spi_basic.panelCSS, LOW );      //CS slave Low
-    delayMicroseconds(500);
   for ( int i = 0; i < len; i++ ) SPI.transfer( data[ i ] );
-    delayMicroseconds(500);
   digitalWrite( spi_basic.panelCSS, HIGH );     //CS slave High
 }
